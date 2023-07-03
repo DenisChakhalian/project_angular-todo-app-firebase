@@ -1,0 +1,30 @@
+<div class="todo" [ngClass]="{'completedTodo': isCompleted}">
+  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="todoIcon"
+       height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+    <g>
+      <path fill="none" d="M0 0h24v24H0z"></path>
+      <path
+        d="M17 3h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4V1h2v2h6V1h2v2zM4 9v10h16V9H4zm2 2h2v2H6v-2zm0 4h2v2H6v-2zm4-4h8v2h-8v-2zm0 4h5v2h-5v-2z"></path>
+    </g>
+  </svg>
+  <div class="todoText">{{todo.todo}}</div>
+  <button class="disabledButtons deleteTodoByIdButton" [disabled]="disabledButtons" (click)="deleteTodoById()">
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="deleteIcon"
+
+         height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+      <g>
+        <path fill="none" d="M0 0h24v24H0z"></path>
+        <path
+          d="M17 6h5v2h-2v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V8H2V6h5V3a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3zm1 2H6v12h12V8zm-4.586 6l1.768 1.768-1.414 1.414L12 15.414l-1.768 1.768-1.414-1.414L10.586 14l-1.768-1.768 1.414-1.414L12 12.586l1.768-1.768 1.414 1.414L13.414 14zM9 4v2h6V4H9z"></path>
+      </g>
+    </svg>
+  </button>
+  <button class="disabledButtons completeTodoButton" [disabled]="disabledButtons" (click)="completeTodo()">
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="checkIcon"
+
+         height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"></path>
+    </svg>
+  </button>
+</div>

@@ -1,0 +1,22 @@
+<div class="todos-actions" bis_skin_checked="1">
+  <button title="Reset Todos" class="Button_button__wEJ3i" (click)="deleteAll()" [disabled]="isDisable">
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em"
+         xmlns="http://www.w3.org/2000/svg">
+      <g>
+        <path fill="none" d="M0 0h24v24H0z"></path>
+        <path
+          d="M5.463 4.433A9.961 9.961 0 0 1 12 2c5.523 0 10 4.477 10 10 0 2.136-.67 4.116-1.81 5.74L17 12h3A8 8 0 0 0 6.46 6.228l-.997-1.795zm13.074 15.134A9.961 9.961 0 0 1 12 22C6.477 22 2 17.523 2 12c0-2.136.67-4.116 1.81-5.74L7 12H4a8 8 0 0 0 13.54 5.772l.997 1.795z"></path>
+      </g>
+    </svg>
+  </button>
+  <button [disabled]="!hasCompleted.length" (click)="deleteCompletedTodos()" title="Clear Completed Todos" class="Button_button__wEJ3i">
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em"
+         xmlns="http://www.w3.org/2000/svg">
+      <g>
+        <path fill="none" d="M0 0h24v24H0z"></path>
+        <path
+          d="M17 6h5v2h-2v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V8H2V6h5V3a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3zm1 2H6v12h12V8zm-4.586 6l1.768 1.768-1.414 1.414L12 15.414l-1.768 1.768-1.414-1.414L10.586 14l-1.768-1.768 1.414-1.414L12 12.586l1.768-1.768 1.414 1.414L13.414 14zM9 4v2h6V4H9z"></path>
+      </g>
+    </svg>
+  </button>
+</div>

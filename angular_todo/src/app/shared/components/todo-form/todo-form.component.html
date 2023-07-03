@@ -1,0 +1,8 @@
+<div class="todoFormContainer">
+  <form id="todoForm">
+    <label for="todo" class="form-label">
+      <input [(ngModel)]="todo" id="todo" name="todo" placeholder="enter new todo" value="" class="">
+    </label>
+    <button type="submit" title="submit" class="btn btn-light"  (click)="addNewItem()">submit</button>
+  </form>
+</div>

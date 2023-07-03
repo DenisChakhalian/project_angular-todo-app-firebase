@@ -1,0 +1,16 @@
+<form id="login-form" (ngSubmit)="onSubmit()">
+  <div class="form-input">
+    <label for="email" class="form-label">Email:</label>
+    <input class="form-control" [(ngModel)]="email" name="email" id="email" type="email" maxlength="320">
+  </div>
+  <div class="form-input">
+    <label for="password" class="form-label">Password:</label>
+    <input class="form-control" [(ngModel)]="password" name="password" id="password" type="password" maxlength="128">
+  </div>
+  <button class="btn" type="submit">Login</button>
+  <div>
+    <button class="btn" (click)="signInWithGoogle()" type="button">Google</button>
+    <button class="btn" (click)="signInWithTwitter()" type="button">Twitter</button>
+  </div>
+  <button class="btn" routerLink="/register" type="button">Dont have an account? Register!</button>
+</form>

@@ -1,0 +1,16 @@
+<div class="userAuth">
+  <div class="username" *ngIf="this.username">
+    <p>{{this.username}}</p>
+  </div>
+  <app-logout></app-logout>
+</div>
+<h1 class="app-name">Todo app</h1>
+<div class="container" *ngIf="!isLoading; else loading">
+  <app-todo-form (newTodo)="addTodo($event)"></app-todo-form>
+  <app-todo-actions [hasCompleted]="completedTodos" (deleteCompleted)="deleteCompleted($event)" (deleteAllTodos)="deleteAllTodos()" *ngIf="todos.length"></app-todo-actions>
+  <app-todo-list [todos]="todos" (completeTodo)="complete($event)" (deleteTodoById)="delete($event)" *ngIf="todos.length; else noOneTodo"></app-todo-list>
+  <ng-template #noOneTodo><h2>List is empty</h2></ng-template>
+</div>
+<ng-template #loading>
+  <h2 class="loading">Loading...</h2>
+</ng-template>

@@ -1,0 +1,20 @@
+<form id="register-form" (ngSubmit)="onSubmit()">
+  <div class="form-input">
+    <label for="username" class="form-label">Username:</label>
+    <input name="username" class="form-control" id="username" type="text" [(ngModel)]="username" maxlength="16" required>
+  </div>
+  <div class="form-input">
+    <label for="email" class="form-label">Email:</label>
+    <input name="email" class="form-control" id="email" type="email" [(ngModel)]="email" maxlength="320" required>
+  </div>
+  <div class="form-input">
+    <label for="password" class="form-label">Password:</label>
+    <input name="password" class="form-control" id="password" type="password" [(ngModel)]="password" maxlength="128" required>
+  </div>
+    <button class="btn" type="submit">Register</button>
+  <div>
+    <button class="btn" (click)="signInWithGoogle()" type="button">Google</button>
+    <button class="btn" (click)="signInWithTwitter()" type="button">Twitter</button>
+  </div>
+    <button class="btn" routerLink="/login" type="button">Do you already have an account? Login!</button>
+</form>
